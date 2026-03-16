@@ -8,6 +8,8 @@ public class Persegi extends BangunDatar{
     /******ATRIBUT*******/
     private double sisi;
 
+    /******METHOD*******/
+    //konstruktor untuk membuat persegi
     public Persegi(){
         setJmlSisi(4);
     }

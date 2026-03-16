@@ -10,6 +10,7 @@ public class BangunDatar {
     private String warna;
     private String border;
 
+    /******METHOD*******/
     public BangunDatar(){
     }
 
