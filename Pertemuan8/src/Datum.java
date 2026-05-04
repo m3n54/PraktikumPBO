@@ -5,10 +5,7 @@
  * Tanggal      : 28 April 2026
  */
 
-/**
- * Kelas generik Datum<T>.
- * T dapat berupa tipe apa pun (Integer, String, Anabul, dsb.)
- */
+
 public class Datum<T> {
     private T isi;
 

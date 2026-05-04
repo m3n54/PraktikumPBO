@@ -2,20 +2,17 @@
  * Deskripsi    : Program utama demonstrasi Generik
  * Pembuat      : Menza Isaiah Tampubolon
  * NIM          : 24060124140138
- * Tanggal      : 28 April 2026
+ * Tanggal      : 4 Mei 2026
  */
 
 public class Main {
 
     // Helper: cetak separator bagian
     static void header(String judul) {
-        System.out.println("\n=================");
         System.out.println("  " + judul);
-        System.out.println("=====================");
     }
 
     public static void main(String[] args) {
-        header("I.2 -- Kelas Generik Datum");
 
         // Datum berisi Integer
         Datum<Integer> datumInt = new Datum<>(42);
@@ -108,15 +105,43 @@ public class Main {
         System.out.println("\nBobot2(" + anggora + ", " + kemban + ")");
         System.out.println("Jumlah bobot = " + jumlah3 + " kg");
 
-        System.out.println("\n==========================================");
-        System.out.println("  Selesai -- Praktikum 8 Generik");
-        System.out.println("==========================================\n");
+        header("III.4 -- Kelas Generik Data (Larik Statik)");
+
+        Data<Anabul> listAnabul = new Data<>();
+
+        // Test setIsi dan getSize
+        System.out.println("Menambahkan elemen ke listAnabul...");
+        listAnabul.setIsi(1, doggo);
+        listAnabul.setIsi(2, anggora);
+        listAnabul.setIsi(3, birdie);
+        listAnabul.setIsi(4, kemban);
+
+        System.out.println("Banyak elemen (getSize) : " + listAnabul.getSize());
+
+        // Test getIsi
+        System.out.println("\nMengambil elemen dari listAnabul:");
+        for (int i = 1; i <= listAnabul.getSize(); i++) {
+            System.out.println("Posisi " + i + ": " + listAnabul.getIsi(i));
+            System.out.print("Suara : "); 
+            listAnabul.getIsi(i).suara();
+        }
+
+        // Test batas (1..100)
+        System.out.println("\nTest batas indeks:");
+        listAnabul.setIsi(101, doggo);
+        listAnabul.getIsi(0);
     }
 }
 
 
-// Refleksi : 
-// Renungan : Simpulkan bagaimana cara kerja konsep Generik sesuai kalimat Anda sendiri!
-// Laporkan hasil kerja Anda sesuai petunjuk Asisten!
-// Konsep generik bekerja sebagai suatu konsep atau syarat yang memungkinkan satu kode digunakan untuk berbagai tipe data tanpa harus ditulis berulang kali.
+/* 
+ * Renungan : Simpulkan bagaimana cara kerja konsep Generik sesuai kalimat Anda sendiri!
+ * 
+ * Konsep Generik dalam Java memungkinkan kita untuk membuat kelas, interface, atau metode 
+ * yang dapat beroperasi pada berbagai tipe data (objek) sambil tetap menjamin keamanan tipe (type safety) 
+ * pada saat kompilasi. Cara kerjanya adalah dengan menggunakan "parameter tipe" (seperti <T>) 
+ * sebagai placeholder. Saat kode tersebut digunakan, kita menentukan tipe data spesifiknya, 
+ * sehingga kita tidak perlu melakukan casting manual dan dapat menghindari kesalahan ClassCastException 
+ * di waktu runtime. Generik membuat kode lebih fleksibel, reusable, dan lebih bersih.
+ */
 

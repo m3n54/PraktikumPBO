@@ -1,5 +1,5 @@
 /* Nama File    : OperatorGenerik.java
- * Deskripsi    : Kelas dengan prosedur generik Tukar dan fungsi generik
+ * Deskripsi    : Kelas dengan prosedur generik Tukar dan fungsi generik Bobot2 — Tugas II.3
  * Pembuat      : Menza Isaiah Tampubolon
  * NIM          : 24060124140138
  * Tanggal      : 28 April 2026
